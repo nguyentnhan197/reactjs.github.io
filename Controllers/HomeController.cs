@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web.Http;
 using Microsoft.AspNetCore.Mvc;
-
-using System.Web.Http.Cors;
-using System.Threading;
 
 namespace DemoReact.Controllers
 {
@@ -16,22 +11,6 @@ namespace DemoReact.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-
-        public string NhiemVu1()
-        {
-            Thread.Sleep(1000);
-            return "NhiemVu1";
-        }
-        public string NhiemVu2()
-        {
-            Thread.Sleep(4000);
-            return "NhiemVu2";
-        }
-        public string NhiemVu3()
-        {
-            Thread.Sleep(2000);
-            return "NhiemVu3";
         }
 
         public JsonResult GetDanhSachCustomer(ClientFilter filter = null)

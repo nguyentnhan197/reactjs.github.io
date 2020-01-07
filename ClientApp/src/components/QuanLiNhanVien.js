@@ -53,50 +53,9 @@ export default class QuanLiNhanVien extends Component {
     }
 
     componentDidMount() {
-        this.nhiemVu1();
-        this.nhiemVu2();
-        this.nhiemVu3();
-
         this.getFilter()
         document.addEventListener("keydown", this.keyCode, false);
     }
-
-    nhiemVu1 = () => {
-        axios.get("/Home/NhiemVu1",
-            {
-                params: {
-                 
-                }
-            }
-        ).then(response => {
-            console.log(response.data)
-        })
-    }
-    nhiemVu2 = () => {
-        axios.get("/Home/NhiemVu2",
-            {
-                params: {
-                 
-                }
-            }
-        ).then(response => {
-            console.log(response.data)
-        })
-    }
-    nhiemVu3 = () => {
-        axios.get("/Home/NhiemVu3",
-            {
-                params: {
-                 
-                }
-            }
-        ).then(response => {
-            console.log(response.data)
-        })
-    }
-
-
-
 
     componentWillUnmount() {
         document.removeEventListener("keydown", this.keyCode, false);
